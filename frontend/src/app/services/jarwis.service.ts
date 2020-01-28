@@ -7,23 +7,23 @@ import { HttpClient } from '@angular/common/http';
 })
 export class JarwisService {
 
-  private baseUrl ='http://localhost:8000/api';
+  private baseUrl = 'http://localhost:8000/api';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  signup(data){
-    return this.http.post(`${this.baseUrl}/signup`,data)
+  signup(data) {
+    return this.http.post(`${this.baseUrl}/signup`, data);
   }
 
-  login(data){
-    return this.http.post(`${this.baseUrl}/login`,data)
+  login(data) {
+    return this.http.post(`${this.baseUrl}/login`, data);
   }
 
-  sendPasswordResetLink(data) {
-    return this.http.post(`${this.baseUrl}/sendPasswordResetLink`, data)
+  sendPasswordResetLink( data ) {
+    return this.http.post(`${this.baseUrl}/sendPasswordResetLink`, data);
   }
 
   changePassword(data) {
-    return this.http.post(`${this.baseUrl}/resetPassword`, data)
+    return this.http.post(`${this.baseUrl}/resetPassword`, data);
   }
 }
